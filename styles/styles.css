@@ -49,7 +49,6 @@ header div {
 
 header div img {
     margin-right: 2rem;
-    flex: 1;
     height: 100%;
     width: auto;
     opacity: 100;
@@ -123,6 +122,16 @@ input:focus {
 input:invalid {
     border: var(--red-color) 3px solid;
     padding: 2px 8px;
+}
+
+input:invalid + span {
+    font-weight: 200;
+    font-size: 0.5em;
+}
+
+input:invalid + span::after {
+    content: "Please check your input";
+    color:  rgb(218, 93, 22);
 
 }
 
@@ -135,7 +144,6 @@ button {
     border-radius: 0.5em;
     border: 0;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2)
-
 }
 
 
@@ -148,4 +156,10 @@ button {
     .container {
         margin-top: 3vh;
     }
+
+    main p,
+    fieldset,
+    button {
+    min-width:340px;
+}
   }
